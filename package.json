@@ -1,0 +1,15 @@
+{
+  "name": "ga",
+  "version": "1.0.0",
+  "description": "A genetic algorithm process using javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "genetic",
+    "algorithm"
+  ],
+  "author": "Neo",
+  "license": "ISC"
+}
