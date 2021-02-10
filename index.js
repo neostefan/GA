@@ -1,5 +1,5 @@
-const { generate } = require('./random');
-const { getFitnessGenerationVariables, getBase10Generation } = require('./decode');
+const { generate } = require('./main/random/random');
+const { getFitnessGenerationVariables, getBase10Generation } = require('./main/decode/decode');
 const { getGenerationFitnessMin } = require('./fitness');
 const { rankAscendingFitnessMin } = require('./ranking');
 const { getbestGenerationMin } = require('./Records/output');

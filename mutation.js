@@ -1,4 +1,4 @@
-const { random } = require('./random');
+const { random } = require('./main/random/random');
 
 const mutator = (parent1, parent2) => {
     let position = Math.round((Math.random() * 4));

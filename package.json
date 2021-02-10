@@ -4,7 +4,8 @@
   "description": "A genetic algorithm process using javascript",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "start": "node test.js" 
   },
   "keywords": [
     "genetic",
