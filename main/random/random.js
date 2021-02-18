@@ -1,7 +1,7 @@
 const getRandom = (min, max) => {
     Math.ceil(min);
     Math.floor(max);
-    return Math.floor(Math.random()* (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 //function used to generate an allele of 5 binary digits
@@ -39,24 +39,36 @@ const generateChromosome = () => {
 }
 
 // function used to generate the initial population of GA 
-const generateInitialPopulation = () => {
-    let initial = {};
-    let arr = []
+// const generateInitialPopulation = () => {
+//     let initial = {};
+//     let arr = []
 
-    for(i = 0; i < 100; i++) {
-        arr.push(i);
+//     for(i = 0; i < 100; i++) {
+//         arr.push(i);
+//     }
+
+//     for(const value of arr) {
+//         initial[value] = generateChromosome();
+//     }
+
+//     return initial;
+// }
+
+const generate = () => {
+    let arr = [];
+    
+    for(let i = 0; i < 100; i++) {
+        arr[i] = generateChromosome();
     }
 
-    for(const value of arr) {
-        initial[value] = generateChromosome();
-    }
-
-    return initial;
+    return arr;
 }
+
+const initialPopulation = generate();
 
 module.exports = {
     random: getRandom,
     chromosome: generateChromosome,
     allele: generateAllele,
-    generate: generateInitialPopulation
+    initialPopulation
 }

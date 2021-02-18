@@ -4,9 +4,13 @@
 
 // function to obtain the max fitness from the decodedfitnessVariables 
 const fitnessMax = ( decodedfitnessVariables ) => {
-    let x = decodedfitnessVariables.x;
-    let y = decodedfitnessVariables.y;
-    let z = decodedfitnessVariables.z;
+    // let x = decodedfitnessVariables.x;
+    // let y = decodedfitnessVariables.y;
+    // let z = decodedfitnessVariables.z;
+
+    let x = decodedfitnessVariables[0];
+    let y = decodedfitnessVariables[1];
+    let z = decodedfitnessVariables[2];
 
     let fitnessValue = x * y * x + x * y + x * z + y * z - x - y - z;
     return fitnessValue;
@@ -14,12 +18,9 @@ const fitnessMax = ( decodedfitnessVariables ) => {
 
 // function to obtain min fitness from the decodedfitnessVariables
 const fitnessMin = ( decodedfitnessVariables ) => {
-    let x = decodedfitnessVariables.x;
-    let y = decodedfitnessVariables.y;
-    let z = decodedfitnessVariables.z;
+    let fitness = fitnessMax(decodedfitnessVariables);
 
-    let fitnessValue = x * y * x + x * y + x * z + y * z - x - y - z;
-    let Minfitness = 1/fitnessValue;
+    let Minfitness = 1/fitness;
 
     return Minfitness;
 }

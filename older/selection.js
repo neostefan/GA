@@ -55,7 +55,18 @@ const newgenerationSelection = ( prevGeneration, generationfitnessValues ) => {
     return newgeneration;
 }
 
+const generateSelectors = () => {
+    let selectors = [];
+
+    for(let i = 0; i < 100; i++) {
+        selectors[i] = Math.random();
+    }
+
+    return selectors;
+}
+
 module.exports = {
     RWselection: selectwithRW,
-    getNewGeneration: newgenerationSelection
+    getNewGeneration: newgenerationSelection,
+    generateSelectors
 }
